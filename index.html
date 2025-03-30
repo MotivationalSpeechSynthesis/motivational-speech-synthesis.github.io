@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motivational Speech Synthesis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    a {
+      text-decoration: underline !important;
+    }
+    a:hover {
+      text-decoration: none !important;
+    }
+  </style>
+</head>
+<body class="">
+  <div class="flex flex-col px-4 justify-center w-full md:max-w-[900px] mx-auto">
+    <!-- Title -->
+    <h1 class="text-center text-6xl font-bold mt-8">
+      Motivational Speech Synthesis
+    </h1>
+
+        <!-- Video Section -->
+        <div class="py-4">
+            <div class="flex justify-center">
+              <video controls class="w-full">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+      
+    
+    <hr class="my-4 border-gray-300">
+
+        <!-- Abstract Section -->
+        <div>
+            <p class="text-justify" style="text-align-last: center;">
+              Motivational speech has emerged as a prominent cultural phenomenon, characterized by persuasive rhetoric, emotional intensity, and a focus on success-driven narratives. This paper presents a computational approach to replicating the distinctive prosodic patterns of motivational speech while critically examining its sociocultural underpinnings. Our research builds on recent advancements in speech emotion recognition and emotion control in text-to-speech (TTS). Leveraging open sources deep learning models techniques, we analyze and enhance web-scraped motivational speech data. The generated dataset helps to construct a TTS architecture capable of synthesizing motivational speech with adjustable intensity. Our proposed model, adapted from EmoKnob, implements a motivational factor, a one-dimensional scale derived from high-dimensional emotional speech representations. By situating motivational speech within broader discourses of self-optimization and meritocracy, this project advances emotional speech synthesis while inviting reflection on the societal values embedded in such mediated narratives.
+            </p>
+          </div>
+          
+          <hr class="my-8 border-gray-300">
+          
+    
+    <div>
+        <div class="grid grid-cols-4 gap-0 text-center">
+          <!-- Row 1: Names -->
+          <div class="font-bold">Luis Küffner</div>
+          <div class="font-bold">Pierre-Louis Suckrow</div>
+          <div class="font-bold">Patrick Stecher</div>
+          <div class="font-bold">Nikolaj Wolff</div>
+          
+          <!-- Row 2: Department / Study Program -->
+          <div>
+            <a href="https://www.udk-berlin.de/studium/kunst-und-medien/" target="_blank">Art and Media</a>
+          </div>
+          <div>
+            <a href="https://www.newpractice.net/study" target="_blank">Design and Computation</a>
+          </div>
+          <div>
+            <a href="https://www.tu.berlin/en/studying/study-programs/all-programs-offered/study-course/computer-science-informatik-m-sc" target="_blank">Computer Science</a>
+          </div>
+          <div>
+            <a href="https://www.tu.berlin/studieren/studienangebot/gesamtes-studienangebot/studiengang/audiokommunikation-und-technologie-m-sc" target="_blank">Audiocommunication and -technology</a>
+          </div>
+          
+          <!-- Row 3: University -->
+          <div>
+            <a href="https://www.udk-berlin.de" target="_blank">Berlin University of the Arts</a>
+          </div>
+          <div>
+            <a href="https://www.udk-berlin.de" target="_blank">Berlin University of the Arts</a>
+          </div>
+          <div>
+            <a href="https://www.tu.berlin/" target="_blank">Technical University Berlin</a>
+          </div>
+          <div>
+            <a href="https://www.tu.berlin/" target="_blank">Technical University Berlin</a>
+          </div>
+          
+          <!-- Row 4: City -->
+          <div>Berlin, Germany</div>
+          <div>Berlin, Germany</div>
+          <div>Berlin, Germany</div>
+          <div>Berlin, Germany</div>
+          
+          <!-- Row 5: Email -->
+          <div>
+            <a href="mailto:l.kueffner@udk-berlin.de">l.kueffner@udk-berlin.de</a>
+          </div>
+          <div>
+            <a href="mailto:suckrowpierre@gmail.com">suckrowpierre@gmail.com</a>
+          </div>
+          <div>
+            <a href="mailto:stecher@campus.tu-berlin.de">stecher@campus.tu-berlin.de</a>
+          </div>
+          <div>
+            <a href="mailto:stecher@campus.tu-berlin.de">stecher@campus.tu-berlin.de</a>
+          </div>
+        </div>
+      </div>
+    
+    <hr class="my-4 border-gray-300">
+    
+    
+    <!-- Data Section -->
+    <div>
+      <div class="flex justify-center">
+        <iframe src="assets/3d_scatter_plot.html" class=" w-full h-[600px] border border-solid" title="Interactive 3D Plot"></iframe>
+      </div>
+    </div>
+    
+    <hr class="my-4 border-gray-300">
+    
+    <!-- Architecture Image Section -->
+    <div>
+      <div class="flex justify-center">
+        <img src="assets/architecture.png" alt="Architecture" class="w-full h-auto">
+      </div>
+    </div>
+    
+    <hr class="my-4 border-gray-300">
+    
+    <!-- Audio Examples Section -->
+    <div class="flex flex-col justify-center text-center"> 
+      <h2 class="text-xl font-semibold mb-4">Audio Examples</h2>
+      <div class=""> 
+      <div class="inline-grid grid-cols-[max-content_max-content] gap-0">
+        <!-- Prompt header spanning both columns -->
+        <div class="col-span-2 text-center font-semibold border border-gray-300 p-2">
+          Your motivational speech prompt goes here.
+        </div>
+        <!-- Table headers -->
+        <div class="text-center font-semibold border border-gray-300 p-2">
+          Motivational Factor
+        </div>
+        <div class="text-center font-semibold border border-gray-300 p-2">
+          Audio
+        </div>
+        <!-- Row 1 -->
+        <div class="text-center border border-gray-300 p-2">0</div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="audio1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- Row 2 -->
+        <div class="text-center border border-gray-300 p-2">0.25</div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="audio2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- Row 3 -->
+        <div class="text-center border border-gray-300 p-2">0.5</div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="audio3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- Row 4 -->
+        <div class="text-center border border-gray-300 p-2">0.75</div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="audio4.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- Row 5 -->
+        <div class="text-center border border-gray-300 p-2">1</div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="audio5.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <hr class="my-4 border-gray-300">
+  </div>
+</body>
+</html>
