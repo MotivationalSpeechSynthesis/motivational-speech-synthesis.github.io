@@ -22,12 +22,16 @@
     a:hover {
       text-decoration: none !important;
     }
+
+    audio {
+      width: 100px !important;
+    }
   </style>
 </head>
 <body class="">
   <div class="flex flex-col px-4 justify-center w-full md:max-w-[900px] mx-auto">
     <!-- Title -->
-    <h1 class="text-center text-6xl font-bold mt-8">
+    <h1 class="text-center text-6xl font-bold mt-8 uppercase">
       Motivational Speech Synthesis
     </h1>
 
@@ -65,16 +69,16 @@
 
         <!-- Abstract Section -->
         <div>
-            <p class="text-justify" style="text-align-last: center;">
+            <p class="text-justify indent-4">
               Motivational speech has emerged as a prominent cultural phenomenon, characterized by persuasive rhetoric, emotional intensity, and a focus on success-driven narratives. This paper presents a computational approach to replicating the distinctive prosodic patterns of motivational speech while critically examining its sociocultural underpinnings. Our research builds on recent advancements in speech emotion recognition and emotion control in text-to-speech (TTS). Leveraging open sources deep learning models techniques, we analyze and enhance web-scraped motivational speech data. The generated dataset helps to construct a TTS architecture capable of synthesizing motivational speech with adjustable intensity. Our proposed model, adapted from EmoKnob, implements a motivational factor, a one-dimensional scale derived from high-dimensional emotional speech representations. By situating motivational speech within broader discourses of self-optimization and meritocracy, this project advances emotional speech synthesis while inviting reflection on the societal values embedded in such mediated narratives.
             </p>
           </div>
           
-          <hr class="my-8 border-gray-300">
+          <hr class="my-4 border-gray-300">
           
     
     <div>
-        <div class="grid grid-cols-4 gap-y-2 text-center">
+        <div class="grid grid-cols-4 gap-x-4 text-center text-sm">
           <!-- Row 1: Names -->
           <div class="font-bold">Luis Küffner</div>
           <div class="font-bold">Pierre-Louis Suckrow</div>
@@ -133,85 +137,119 @@
     
     <hr class="my-4 border-gray-300">
     <!-- Links Grid Section -->
+    
+    
+        
+    <!-- Architecture Image Section -->
+    <div>
+      <h2 class="text-xl mt-4 uppercase font-bold mb-4">Proposed architecture</h2>
+
+      <p class="text-justify indent-4 mb-4">
+        The following diagram illustrates the architecture developed for synthesizing motivational speech building ontop the <a href="https://arxiv.org/abs/2410.00316" target="_blank">EmoKnob</a> model. Motivational intensity is controlled via averaged speaker embeddings, derived by selecting and averaging speech samples corresponding to different levels of motivational intensity from our dataset. These embeddings are generated in discrete increments along our one-dimensional motivational factor, ranging from 0 (low intensity) to 1 (high intensity). During inference, the closest embedding is selected according to the desired motivational factor, enabling fine-grained emotional control of synthesized speech.
+      </p>
+      <div class="flex justify-center">
+        <img src="assets/architecture.png" alt="Architecture" class="w-full h-auto">
+      </div>
+    </div>
+
+    <hr class="my-4 border-gray-300">
 
     
     <!-- Data Section -->
     <div>
+      <h2 class="text-xl mt-4 uppercase font-bold mb-4">Motivational Factor</h2>
+
+      <p class="text-justify indent-4 mb-4">
+        The visualization below shows a 3-dimensional representation of emotional speech samples extracted from motivational speeches, projected into a Valence-Arousal-Dominance (VAD) space. Each point represents a motivational speech segment collected from YouTube, embedded using a deep-learning-based emotion recognition model (Wav2Vec). Using the UMAP dimensionality reduction algorithm, these complex emotional patterns are compressed into a single value, called the motivational factor, which ranges from 0 (low motivational intensity) to 1 (high motivational intensity). Explore the interactive plot to see how emotional dimensions correspond to the motivational intensity scale.
+      </p>
+
       <div class="flex justify-center">
         <iframe src="assets/3d_scatter_plot.html" class=" w-full h-[600px] border border-solid" title="Interactive 3D Plot"></iframe>
       </div>
     </div>
     
-    <hr class="my-4 border-gray-300">
-    
-    <!-- Architecture Image Section -->
-    <div>
-      <div class="flex justify-center">
-        <img src="assets/architecture.png" alt="Architecture" class="w-full h-auto">
-      </div>
-    </div>
+
+
     
     <hr class="my-4 border-gray-300">
     
-    <!-- Audio Examples Section -->
-    <div class="flex flex-col justify-center text-center"> 
-      <h2 class="text-xl font-semibold mb-4">Audio Examples</h2>
-      <div class=""> 
-      <div class="inline-grid grid-cols-[max-content_max-content] gap-0">
-        <!-- Prompt header spanning both columns -->
-        <div class="col-span-2 text-center font-semibold border border-gray-300 p-2">
-          Your motivational speech prompt goes here.
-        </div>
-        <!-- Table headers -->
-        <div class="text-center font-semibold border border-gray-300 p-2">
-          Motivational Factor
-        </div>
-        <div class="text-center font-semibold border border-gray-300 p-2">
-          Audio
-        </div>
-        <!-- Row 1 -->
-        <div class="text-center border border-gray-300 p-2">0</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="audio1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <!-- Row 2 -->
-        <div class="text-center border border-gray-300 p-2">0.25</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="audio2.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <!-- Row 3 -->
-        <div class="text-center border border-gray-300 p-2">0.5</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="audio3.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <!-- Row 4 -->
-        <div class="text-center border border-gray-300 p-2">0.75</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="audio4.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <!-- Row 5 -->
-        <div class="text-center border border-gray-300 p-2">1</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="audio5.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        </div>
-      </div>
+<!-- Audio Examples Section -->
+<div>
+  <h2 class="text-xl mt-4 uppercase font-bold mb-4">Example Audios</h2>
+
+  <p class="text-justify indent-4 mb-4">
+    Below are synthesized audio samples demonstrating how the motivational factor influences speech prosody. We've generated audio for three different motivational speech prompts at various motivational intensity levels, ranging from 0 (low motivational intensity) to 1 (high motivational intensity). Listen to these examples to experience how adjusting the motivational factor affects the expressiveness, tone, and emotional delivery of synthesized motivational speech.
+  </p>
+
+  <div class="inline-grid grid-cols-[auto_1fr_1fr_1fr] gap-0">
+    <!-- Header Row -->
+    <div class="text-center font-semibold border border-gray-300 p-2">Motivational Factor</div>
+    <div class="text-center font-semibold border border-gray-300 p-2">Prompt 1: "Your motivational speech prompt 1."</div>
+    <div class="text-center font-semibold border border-gray-300 p-2">Prompt 2: "Your motivational speech prompt 2."</div>
+    <div class="text-center font-semibold border border-gray-300 p-2">Prompt 3: "Your motivational speech prompt 3."</div>
+
+    <!-- Row 1 -->
+    <div class="text-center border border-gray-300 p-2">0</div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt1_audio0.mp3" type="audio/mpeg"></audio>
     </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt2_audio0.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt3_audio0.mp3" type="audio/mpeg"></audio>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="text-center border border-gray-300 p-2">0.25</div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt1_audio025.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt2_audio025.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt3_audio025.mp3" type="audio/mpeg"></audio>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="text-center border border-gray-300 p-2">0.5</div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt1_audio05.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt2_audio05.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt3_audio05.mp3" type="audio/mpeg"></audio>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="text-center border border-gray-300 p-2">0.75</div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt1_audio075.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt2_audio075.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt3_audio075.mp3" type="audio/mpeg"></audio>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="text-center border border-gray-300 p-2">1</div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt1_audio1.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt2_audio1.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="flex justify-center border border-gray-300 p-2">
+      <audio controls><source src="prompt3_audio1.mp3" type="audio/mpeg"></audio>
+    </div>
+  </div>
+</div>
+
     
     <hr class="my-4 border-gray-300">
   </div>
