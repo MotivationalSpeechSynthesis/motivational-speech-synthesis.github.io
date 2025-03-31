@@ -11,24 +11,21 @@
       src: url('Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
       font-weight: 100 900;
     }
-
     body {
       font-family: 'Playfair Display', serif;
     }
-
     a {
       text-decoration: underline !important;
     }
     a:hover {
       text-decoration: none !important;
     }
-
     audio {
       width: 100px !important;
     }
   </style>
 </head>
-<body class="">
+<body>
   <div class="flex flex-col px-4 justify-center w-full md:max-w-[900px] mx-auto">
     <!-- Title -->
     <h1 class="text-center text-6xl font-bold mt-8 uppercase">
@@ -168,75 +165,214 @@
       <h2 class="text-xl mt-4 uppercase font-bold mb-4">Example Audios</h2>
 
       <p class="text-justify indent-8 mb-4">
-        Below are synthesized audio samples demonstrating how the motivational factor influences speech prosody. We've generated audio for three different motivational speech prompts at various motivational intensity levels, ranging from 0 (low motivational intensity) to 1 (high motivational intensity). Listen to these examples to experience how adjusting the motivational factor affects the expressiveness, tone, and emotional delivery of synthesized motivational speech.
+        Below are synthesized audio samples demonstrating how the motivational factor influences speech prosody. We've generated audio for seven different motivational speech prompts at various motivational intensity levels, ranging from 0 (low motivational intensity) to 1 (high motivational intensity). Listen to these examples to experience how adjusting the motivational factor affects the expressiveness, tone, and emotional delivery of synthesized motivational speech.
       </p>
 
-      <div class="inline-grid grid-cols-[auto_1fr_1fr_1fr] gap-0">
+      <div class="inline-grid grid-cols-6 gap-0">
         <!-- Header Row -->
-        <div class="text-center font-semibold border border-gray-300 p-2">Motivational Factor</div>
-        <div class="text-center font-semibold border border-gray-300 p-2">Prompt 1: "Your motivational speech prompt 1."</div>
-        <div class="text-center font-semibold border border-gray-300 p-2">Prompt 2: "Your motivational speech prompt 2."</div>
-        <div class="text-center font-semibold border border-gray-300 p-2">Prompt 3: "Your motivational speech prompt 3."</div>
+        <div class="text-center font-semibold border border-gray-300 p-2">Prompt</div>
+        <div class="text-center font-semibold border border-gray-300 p-2">0.00</div>
+        <div class="text-center font-semibold border border-gray-300 p-2">0.25</div>
+        <div class="text-center font-semibold border border-gray-300 p-2">0.50</div>
+        <div class="text-center font-semibold border border-gray-300 p-2">0.75</div>
+        <div class="text-center font-semibold border border-gray-300 p-2">1.00</div>
 
-        <!-- Row 1 -->
-        <div class="text-center border border-gray-300 p-2">0</div>
+        <!-- Prompt 1 -->
+        <div class="border border-gray-300 p-2">Anything you want, you can get.</div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt1_audio0.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example1_mf-0.00.wav" type="audio/wav">
+          </audio>
         </div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt2_audio0.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example1_mf-0.25.wav" type="audio/wav">
+          </audio>
         </div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt3_audio0.mp3" type="audio/mpeg"></audio>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="text-center border border-gray-300 p-2">0.25</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt1_audio025.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example1_mf-0.50.wav" type="audio/wav">
+          </audio>
         </div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt2_audio025.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example1_mf-0.75.wav" type="audio/wav">
+          </audio>
         </div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt3_audio025.mp3" type="audio/mpeg"></audio>
-        </div>
-
-        <!-- Row 3 -->
-        <div class="text-center border border-gray-300 p-2">0.5</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt1_audio05.mp3" type="audio/mpeg"></audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt2_audio05.mp3" type="audio/mpeg"></audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt3_audio05.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example1_mf-1.00.wav" type="audio/wav">
+          </audio>
         </div>
 
-        <!-- Row 4 -->
-        <div class="text-center border border-gray-300 p-2">0.75</div>
+        <!-- Prompt 2 -->
+        <div class="border border-gray-300 p-2">No goal is too far away to be reached."</div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt1_audio075.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example2_mf-0.00.wav" type="audio/wav">
+          </audio>
         </div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt2_audio075.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example2_mf-0.25.wav" type="audio/wav">
+          </audio>
         </div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt3_audio075.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example2_mf-0.50.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example2_mf-0.75.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example2_mf-1.00.wav" type="audio/wav">
+          </audio>
         </div>
 
-        <!-- Row 5 -->
-        <div class="text-center border border-gray-300 p-2">1</div>
+        <!-- Prompt 3 -->
+        <div class="border border-gray-300 p-2">Nobody is coming to save you.</div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt1_audio1.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example3_mf-0.00.wav" type="audio/wav">
+          </audio>
         </div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt2_audio1.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example3_mf-0.25.wav" type="audio/wav">
+          </audio>
         </div>
         <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls><source src="prompt3_audio1.mp3" type="audio/mpeg"></audio>
+          <audio controls>
+            <source src="assets/audio/example3_mf-0.50.wav" type="audio/wav">
+          </audio>
         </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example3_mf-0.75.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example3_mf-1.00.wav" type="audio/wav">
+          </audio>
+        </div>
+
+        <!-- Prompt 4 -->
+        <div class="border border-gray-300 p-2">Reject weakness, embrace discipline.</div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example4_mf-0.00.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example4_mf-0.25.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example4_mf-0.50.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example4_mf-0.75.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example4_mf-1.00.wav" type="audio/wav">
+          </audio>
+        </div>
+
+        <!-- Prompt 5 -->
+        <div class="border border-gray-300 p-2">Seeing, believing, planning and doing it.</div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example5_mf-0.00.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example5_mf-0.25.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example5_mf-0.50.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example5_mf-0.75.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example5_mf-1.00.wav" type="audio/wav">
+          </audio>
+        </div>
+
+        <!-- Prompt 6 -->
+        <div class="border border-gray-300 p-2">Work hard in silence, shock them with your success.</div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example6_mf-0.00.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example6_mf-0.25.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example6_mf-0.50.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example6_mf-0.75.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example6_mf-1.00.wav" type="audio/wav">
+          </audio>
+        </div>
+
+        <!-- Prompt 7 -->
+        <div class="border border-gray-300 p-2">You are strong, resilient, consistent, focused.</div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example7_mf-0.00.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example7_mf-0.25.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example7_mf-0.50.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example7_mf-0.75.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div class="flex justify-center border border-gray-300 p-2">
+          <audio controls>
+            <source src="assets/audio/example7_mf-1.00.wav" type="audio/wav">
+          </audio>
+        </div>
+
       </div>
     </div>
 
