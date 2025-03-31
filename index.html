@@ -5,15 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Motivational Speech Synthesis</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: 'Playfair Display';
-      src: url('Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
-      font-weight: 100 900;
-    }
-    body {
-      font-family: 'Playfair Display', serif;
-    }
+.playfair-display-light {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display-regular {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.playfair-display-bold {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
     a {
       text-decoration: underline !important;
     }
@@ -25,7 +40,7 @@
     }
   </style>
 </head>
-<body>
+<body class="playfair-display-light">
   <div class="flex flex-col px-4 justify-center w-full md:max-w-[900px] mx-auto">
     <!-- Title -->
     <h1 class="text-center text-6xl font-bold mt-8 uppercase">
@@ -171,8 +186,8 @@
           <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
             <line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" stroke-width="1"/>
           </svg>
-          <div class="absolute bottom-0 left-2 text-sm font-semibold">Prompt</div>
-          <div class="absolute top-0 right-2 text-sm font-semibold text-right">Motivational <br/> Factor</div>
+          <div class="absolute bottom-0 left-2 text-sm font-bold">Prompt</div>
+          <div class="absolute top-0 right-2 text-sm font-bold text-right">Motivational <br/> Factor</div>
         </div>
         <div class="text-center font-semibold border border-gray-300 p-2">0.00 <br/><br/></div>
         <div class="text-center font-semibold border border-gray-300 p-2">0.25</div>
