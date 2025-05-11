@@ -159,7 +159,7 @@
         The following diagram illustrates the architecture developed for synthesizing motivational speech building ontop the <a href="https://arxiv.org/abs/2410.00316" target="_blank">EmoKnob</a> model. Motivational intensity is controlled via averaged speaker embeddings, derived by selecting and averaging speech samples corresponding to different levels of motivational intensity from our dataset. These embeddings are generated in discrete increments along our one-dimensional <i class="italic">motivational factor</i>, ranging from 0 (low intensity) to 1 (high intensity). During inference, the closest embedding is selected according to the desired <i class="italic">motivational factor</i>, enabling fine-grained emotional control of synthesized speech.
       </p>
       <div class="flex justify-center">
-        <img src="assets/architecture.png" alt="Architecture" class="w-3/4 h-auto mx-auto">
+        <img src="assets/architecture.svg" alt="Architecture" class="w-3/4 h-auto mx-auto">
       </div>
     </div>
 
@@ -405,11 +405,11 @@
     <hr class="my-4 border-gray-300">
 
     <div>
-      <p class="text-justify indent-8 mt-4 ">
+      <p class="text-justify indent-8 mt-4 text-xs">
       Even though <i class="italic">Motivational Speech Synthesis</i> strives for artistic reflection, we want to emphasize, that this project does not aim to judge any person actually benefiting from motivational speech or similar phenomena. We don't expose or look at people consuming motivational speech, but rather focus on deconstructing underlying circumstances and attitudes of those narratives, which arrive as symptoms of a society driven by growth and success.
       </p>
     </div>
-    <hr class="my-4 border-gray-300 mb-16">
+    <div class="my-4 mb-16">
 
   </div>
 </body>
