@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link
-  rel="icon"
-  href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>"
-/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Motivational Speech Synthesis</title>
@@ -74,7 +72,10 @@
     <!-- Abstract Section -->
     <div>
       <p class="text-justify indent-8">
-        <i class="italic">Motivational speech</i> has emerged as a popular audiovisual phenomenon within Western subcultures, conveying optimal strategies and principles for success through expressive, high-energy delivery. The present paper artistically explores methods for synthesizing the distinctive prosodic patterns inherent to motivational speech, while critically examining its sociocultural foundations. Drawing on recent advances in emotion-controllable text-to-speech (TTS) systems and speech emotion recognition (SER), we employ deep learning models and frameworks to replicate and analyze this genre of speech. Within our proposed architecture, we introduce a one-dimensional <i class="italic">motivational factor</i> derived from high-dimensional emotional speech representations, enabling the control of motivational prosody according to intensity. Situated within broader discourses on self-optimization and meritocracy, <i class="italic">Motivational Speech Synthesis</i> contributes to the field of emotional speech synthesis, while also prompting reflection on the societal values embedded in such mediated narratives.</p>
+
+Within the increasing popularity of fitness and entrepreneurship in western subcultures, video clips of so-called <i class="italic">motivational speech</i> received millions of views across social media. Usually, those audiovisual artifacts show excerpts from presentations or interviews of people—in most cases male business leaders, authors, and other influential figures—who narrate about the optimal instructions, principles, and strategies for success. Paired with epic and emotional background music, these videos should act as a vehicle for self-motivation and goal pursuit. Addressing a primary target group of men, success is often tied to wealthiness, professional growth, or appeal to women, while the same is obstructed by characteristics like weakness, fragility, or discontinuity. With motivational speech, a listener's ultimate goal is to obtain and shape a mindset, which ensures them to be on the right path for achievement. Motivational speech emerges as a phenomenon in a society of self-optimization, embedded in the ethos of constant productivity, competition, and meritocracy.
+      </p><br/><br/> <p class="text-justify indent-8">
+<i class="italic">Motivational Speech Synthesis</i> aims to reflect the inherent patterns and attitudes of <i class="italic">motivational speech</i>. Correlating with the generalization process of one universal way to success as well as the presence of an anticipated forward movement into a listener’s future in <i class="italic">motivational speech</i> itself, we use deep learning techniques to average web-scraped <i class="italic">motivational speech</i> into a text-to-motivational-speech model. With the introduction of a one-dimensional <i class="italic">motivational factor</i>, the model is capable of scaling its motivational prosody. Representing the promise of social mobility, this parameter aligns with phrases like “The harder you work, the more you can get.” In response, we question a universal road to success, only defined and obtained by individual strength and the right mindset, while critically examining the sociocultural foundations of motivational speech. <i class="italic">Motivational Speech Synthesis</i> addresses aspects of our work ethic and how we approach our goals and challenges in life.
     </div>
       
     <hr class="my-4 border-gray-300">
@@ -155,7 +156,7 @@
       <h2 class="text-xl mt-4 uppercase font-bold mb-4">Proposed architecture</h2>
 
       <p class="text-justify indent-8 mb-4">
-        The following diagram illustrates the architecture developed for synthesizing motivational speech building ontop the <a href="https://arxiv.org/abs/2410.00316" target="_blank">EmoKnob</a> model. Motivational intensity is controlled via averaged speaker embeddings, derived by selecting and averaging speech samples corresponding to different levels of motivational intensity from our dataset. These embeddings are generated in discrete increments along our one-dimensional <i class="italic">motivational factor</i>, ranging from 0 (low intensity) to 1 (high intensity). During inference, the closest embedding is selected according to the desired <i class="italic">motivational factor</i>, enabling fine-grained emotional control of synthesized speech.
+        The following diagram illustrates our <a href="https://arxiv.org/abs/2410.00316" target="_blank">EmoKnob</a> for synthesizing motivational speech. Motivational intensity is controlled via averaged speaker embeddings, which are derived by selecting and averaging speech samples corresponding to different levels of motivational intensity within our dataset. These embeddings are generated in discrete increments along our one-dimensional <i class="italic">motivational factor</i>, ranging from 0 (low intensity) to 1 (high intensity). During inference, the closest embedding is selected according to the desired <i class="italic">motivational factor</i>, allowing precise emotional adjustment of generated speech. 
       </p>
       <div class="flex justify-center">
         <img src="assets/architecture.svg" alt="Architecture" class="w-3/4 h-auto mx-auto">
@@ -169,7 +170,7 @@
       <h2 class="text-xl mt-4 uppercase font-bold mb-4">Motivational Factor</h2>
 
       <p class="text-justify indent-8 mb-4">
-        The visualization below shows a 3-dimensional representation of emotional speech samples extracted from motivational speeches, projected into a Valence-Arousal-Dominance (VAD) space. Each point represents a motivational speech segment collected from YouTube, embedded using a deep-learning-based emotion recognition model (Wav2Vec). Using the UMAP dimensionality reduction algorithm, these complex emotional patterns are compressed into a single value, called the <i class="italic">motivational factor</i>, which ranges from 0 (low motivational intensity) to 1 (high motivational intensity). Explore the interactive plot to see how emotional dimensions correspond to the motivational intensity scale.
+        The visualization below presents a 3-dimensional representation of emotional speech samples drawn from motivational speeches, projected into Valence-Arousal-Dominance (VAD) emotion space. Here, the scales range from negative to positive emotions (valence), calm to stimulated emotions (arousal), and submissive to dominant emotions (dominance). Each point represents a segment of motivational speech collected from YouTube, embedded using the deep learning-based speech emotion recognition model <a href="https://arxiv.org/abs/2203.07378" target="_blank">wav2vec 2.0</a>. To distill these complex emotional patterns into a single interpretable value, we apply the UMAP dimensionality reduction algorithm, resulting in our <i class="italic">motivational factor</i>—a continuous scale ranging from 0 (low motivational intensity) to 1 (high motivational intensity). Explore the interactive plot to observe how different datapoints align along this motivational intensity spectrum.
       </p>
 
       <div class="flex justify-center">
@@ -181,10 +182,10 @@
     
     <!-- Audio Examples Section -->
     <div>
-      <h2 class="text-xl mt-4 uppercase font-bold mb-4">Example Audios</h2>
+      <h2 class="text-xl mt-4 uppercase font-bold mb-4">Audio Examples</h2>
 
       <p class="text-justify indent-8 mb-4">
-        Below are synthesized audio samples demonstrating how the <i class="italic">motivational factor</i> influences speech prosody. We've generated audio for seven different motivational speech prompts at various motivational intensity levels, ranging from 0 (low motivational intensity) to 1 (high motivational intensity). Listen to these examples to experience how adjusting the <i class="italic">motivational factor</i> affects the expressiveness, tone, and emotional delivery of synthesized motivational speech.
+        Below are synthesized audio samples demonstrating how our <i class="italic">motivational factor</i> influences speech prosody. For each of seven motivational speech prompts, we generated audio at varying motivational intensity levels, ranging from 0.00 (low motivational intensity) to 1.00 (high motivational intensity). Listen to these examples to perceive how adjusting the <i class="italic">motivational factor</i> affects the expressiveness, tone, and emotional delivery of synthesized motivational speech.
       </p>
 
       <div class="inline-grid grid-cols-6 gap-0">
