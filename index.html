@@ -610,9 +610,39 @@
 </div>
 
 
-    <div class="my-4 mb-16">
+    <hr class="my-4 border-gray-300">
 
+    <!-- Citation -->
+    <div>
+      <div class="flex items-center justify-between mt-4 mb-4">
+        <h2 class="text-xl uppercase font-bold">Citation</h2>
+        <button id="copy-bibtex" type="button" class="text-sm border border-gray-300 px-2 py-1 hover:bg-gray-100">Copy BibTeX</button>
+      </div>
+      <pre id="bibtex" class="text-xs bg-gray-50 border border-gray-300 p-4 overflow-x-auto">@article{kuffnerMotivationalSpeechSynthesis2026,
+  title = {Motivational {{Speech Synthesis}}},
+  author = {Küffner, Luis and Suckrow, Pierre-Louis and Stecher, Patrick and Wolff, Nikolaj},
+  date = {2026-07-13},
+  journaltitle = {Art, Aesthetics and AI},
+  shortjournal = {Art Aesthet. AI},
+  volume = {1},
+  publisher = {Universität der Künste Berlin},
+  location = {Berlin},
+  doi = {10.25624/KUENSTE-2492},
+  url = {https://opus4.kobv.de/opus4-udk/2492},
+  langid = {english}
+}</pre>
+    </div>
 
+    <div class="my-4 mb-16"></div>
   </div>
+
+  <script>
+    document.getElementById("copy-bibtex").addEventListener("click", function () {
+      navigator.clipboard.writeText(document.getElementById("bibtex").textContent).then(() => {
+        this.textContent = "Copied";
+        setTimeout(() => (this.textContent = "Copy BibTeX"), 1500);
+      });
+    });
+  </script>
 </body>
 </html>
